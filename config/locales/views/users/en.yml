@@ -1,0 +1,7 @@
+en:
+  users:
+    new:
+      title: Sign up for Sokko
+      sign_up: Sign up!
+    create:
+      welcome: "Welcome to Sokko, %{name}"
