@@ -1,0 +1,19 @@
+jerry:
+  name: Jerry
+  email: jerry@gmail.com
+  password_digest: <%= BCrypt::Password.create("password")%>
+
+kramer:
+  name: Kramer
+  email: kramer@gmail.com
+  password_digest: <%= BCrypt::Password.create("password")%>
+
+elaine:
+  name: Elaine
+  email: elaine@gmail.com
+  password_digest: <%= BCrypt::Password.create("password")%>
+
+george:
+  name: George
+  email: george@gmail.com
+  password_digest: <%= BCrypt::Password.create("password")%>
