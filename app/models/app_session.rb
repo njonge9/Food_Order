@@ -1,3 +1,4 @@
+# app_session for cookies
 class AppSession < ApplicationRecord
   belongs_to :user
 
@@ -6,4 +7,12 @@ class AppSession < ApplicationRecord
   before_create {
     self.token = self.class.generate_unique_secure_token
   }
+
+  def to_h
+    {
+      user_id: user.id,
+      app_session: id,
+      token: AppSession.token
+    }
+  end
 end
