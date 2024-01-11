@@ -36,7 +36,7 @@
                     <%= link_to t(".sign_up"), sign_up_path, class: "button is-primary" %>
                     <%= link_to t(".login"), login_path, class: "button is-light" %>
                 </div>
-            <% end %>
+            <% end unless logged_in?%>
         </div>
     </navbar-menu>
 </nav>
