@@ -17,6 +17,12 @@ module Authenticate
   end
 
   def authenticate_using_cookie
+    app_session = cookies.encrypted[:app_session]
+    authenticate_using app_session&.with_indifferent_access
+  end
+
+  def authenticate_using(data)
+    # Ruby 3 rightward assignment
     data => { user_id:, app_session:, token: }
 
     user = User.find(user_id)
