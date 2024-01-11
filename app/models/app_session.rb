@@ -12,7 +12,7 @@ class AppSession < ApplicationRecord
     {
       user_id: user.id,
       app_session: id,
-      token: AppSession.token
+      token: self.token
     }
   end
 end
