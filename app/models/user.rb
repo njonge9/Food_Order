@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include Authentication
   validates :name, presence: true
   validates :email,
     format: { with: URI::MailTo::EMAIL_REGEXP },
