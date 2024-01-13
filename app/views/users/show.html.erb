@@ -2,7 +2,7 @@
 
 <%= turbo_frame_tag :user_details do %>
     <layout-columns class="columns is-centered">
-        <layout-column class="i-5 mt-6 p-5 m-4 column box">
+        <layout-column class="is-5 mt-6 p-5 m-4 column box">
             <h1 class="title has-text-centered">
                 <%= t(".your_details")%>
             </h1>
@@ -37,7 +37,7 @@
             </h1>
 
             <%= form_with(
-                model: user,
+                model: @user,
                 url: "#",
                 class: "is-flex is-flex-direction-column"
             ) do |form|%>
