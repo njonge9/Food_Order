@@ -16,4 +16,4 @@ services:
 databases:
   - name: sokko-db
     plan: free
-    postgresMajorVersion: 16
+    postgresMajorVersion: 14
