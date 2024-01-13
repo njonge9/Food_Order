@@ -11,7 +11,7 @@ class User < ApplicationRecord
   before_validation :strip_extra_spaces
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 8 }
+  validates :password, on: [:create, :password_change], presence: true, length: { minimum: 8 }
 
   has_many :app_sessions
 
