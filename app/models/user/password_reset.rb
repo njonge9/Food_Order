@@ -18,7 +18,14 @@ module User::PasswordReset
 
   def send_password_reset_email
     UserMailer.with(user: self)
-              .password_reset(self.password_reset_token)
+              .password_reset(CGI.escape(password_reset_id))
               .deliver_now
+  end
+
+  def password_reset_id
+    message_verifier.generate({
+      user_id: id,
+      password_reset_token: password_reset_token
+    }, purpose: :password_reset, expires_in: 2.hours)
   end
 end
