@@ -9,7 +9,8 @@ class Users::PasswordResetsController < ApplicationController
     User.find_by(email: params[:email])&.reset_password
   end
 
-  def edit;end
+  def edit
+  end
 
   def update
     @user.assign_attributes(password_reset_params)
