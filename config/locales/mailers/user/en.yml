@@ -1,0 +1,11 @@
+en:
+  user_mailer:
+    password_reset:
+      subject: Your Sokko password reset instructions
+      heading: Reset your Sokko password
+      body: >
+        Set a new password for Sokko using the below button.
+        Its valid for 2 hours.
+        If you didn't request this, you can safely ignore this email.
+      button: Set a new password
+      
